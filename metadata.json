@@ -1,0 +1,7 @@
+{
+  "name": "الحسن لصيانة الهواتف المحمولة",
+  "description": "نظام مبيعات وصيانة متكامل للهواتف المحمولة والإكسسوارات - POS and Repair Shop Management PWA",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}

@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#1d4ed8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <title>الحسن لصيانة الهواتف المحمولة</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.1/package/dist/xlsx.full.min.js"></script>
+  
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.7.1/firebase-database-compat.js"></script>
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="https://cdn-icons-png.flaticon.com/512/1162/1162483.png">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&display=swap');
+    body {
+      font-family: 'Cairo', sans-serif;
+      background-color: #f8fafc;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    
+    @media print {
+      body * { visibility: hidden; }
+      #print-section, #print-section * { visibility: visible; }
+      #print-section { position: absolute; left: 0; top: 0; width: 100%; }
+    }
+
+    .pos-receipt { width: 80mm; padding: 5mm; font-size: 12px; background: white; }
+    .a4-invoice { width: 210mm; padding: 15mm; background: white; }
+    
+    /* Animations */
+    @keyframes slideUp { from { transform: translateY(20px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+    .animate-slide-up { animation: slideUp 0.4s ease-out; }
+  </style>
+<script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body>
+  <div id="root"></div>
+  <div id="print-section"></div>
+  
+  <script>
+    // Firebase Configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAoZE2KL3APojd929VEbhSv914jzDv90wA",
+      authDomain: "test-dd8b4.firebaseapp.com",
+      databaseURL: "https://test-dd8b4-default-rtdb.firebaseio.com",
+      projectId: "test-dd8b4",
+      storageBucket: "test-dd8b4.firebasestorage.app",
+      messagingSenderId: "761689441004",
+      appId: "1:761689441004:web:667a3fae42f3cf84071bc9",
+      measurementId: "G-PP1BG203MT"
+    };
+    firebase.initializeApp(firebaseConfig);
+    window.db_firebase = firebase.database();
+  </script>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
